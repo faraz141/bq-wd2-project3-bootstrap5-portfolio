@@ -1,133 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ivan Dan Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <style>
         body {
-            padding-top: 56px;
+            background-color: #1a1a1a;
+            color: #f2f2f2;
+            font-family: "Arial", sans-serif;
         }
-        .portfolio-item {
-            margin-bottom: 30px;
+        #portfolio{
+            transition: 0.6s;
+        }
+        #portfolio:hover{
+            transform: scale(0.9);
+        }
+        #services{
+            transition: 1.0s;
+        }
+        #services:hover{
+            transform: scale(1.1);
+        }
+        .container {
+            padding-top: 1rem;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-link {
+            color: #f2f2f2;
+        }
+
+        .nav-link:hover {
+            color: #ffd700;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background-color: #ffd700;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #ffdd4d;
+        }
+
+        .social-icons {
+            list-style: none;
+            padding: 0;
+        }
+
+        .social-icons li {
+            display: inline-block;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons a {
+            color: #f2f2f2;
+        }
+
+        .social-icons a:hover {
+            color: #ffd700;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 500px;
+        }
+
+        .contact-section {
+            padding: 50px 0;
+        }
+
+        .contact-card {
+            background-color: #444;
+            border: none;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-card h5,
+        .contact-card p {
+            color: #f2f2f2;
+        }
+
+        .contact-card i {
+            color: #ffc107;
+            margin-right: 10px;
+        }
+
+        .social-icons a {
+            color: #f2f2f2;
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .footer-text {
+            margin-top: 30px;
+            text-align: center;
+            color: #f2f2f2;
+        }
+
+        .contact-info {
+            color: #f2f2f2;
         }
     </style>
 </head>
+
 <body>
-
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand" href="#">My Portfolio</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <!-- <img src="" alt="Logo" class="logo"> -->
+                <h1>My portfolio</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Search</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Header -->
-<header class="bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column">
-        <h1 class="mt-5">Welcome to My Portfolio</h1>
-        <p class="lead">Showcasing my work and skills</p>
-    </div>
-</header>
-
-<!-- About Section -->
-<section id="about" class="bg-light py-5">
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>About Me</h2>
-                <p class="lead">This is where you can add some information about yourself. You can include your background, skills, and interests. Make this section engaging and informative to let visitors know more about you.</p>
+            <div class="col-md-6" style="margin-top: 100px">
+                <h1>I'M FARAZ ALAM</h1>
+                <p>Front-end Web Developer</p>
+                <p>React.js | Next.js | Typescript</p>
+                <button type="button" class="btn btn-primary">Contact Me</button>
+                <ul class="social-icons mt-5">
+                    <li>
+                        <a href="https://www.facebook.com/faraz.alam.14203544?mibextid=kFxxJD"><i
+                                class="fab fa-facebook-f" style="color: #ffd43b"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/faziikhan2266?t=-u8CnXfuYCZUP3hxWC5gkA&s=09"><i class="fab fa-twitter"
+                                style="color: #ffd43b"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/faraz-alam-89a923296/"><i class="fab fa-linkedin-in"
+                                style="color: #ffd43b"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/faraz141"><i class="fab fa-github" style="color: #ffd43b"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <img src="./Removal-263.png" alt="Profile Picture" class="profile-image" />
             </div>
         </div>
     </div>
-</section>
-
-<!-- Portfolio Section -->
-<section id="portfolio" class="py-5">
-    <div class="container">
+    <div class="container" style="background-color: #201f1f; padding-top: 1rem">
+        <h1 class="text-center mb-4">About</h1>
+        <p class="lead">
+            Hello! I'm FARAZ ALAM, a passionate front-end developer with a focus on
+            creating interactive and responsive web applications using React.js,
+            Next.js, and TypeScript. I love building user-friendly and visually
+            appealing interfaces. With a strong foundation in JavaScript and modern
+            web technologies, I am dedicated to delivering high-quality code and
+            exceptional user experiences.
+        </p>
+    </div>
+    <div class="container mt-5" style="background-color: #201f1f; padding-top: 1rem; color: #1a1a1a">
+        <h1 class="text-center mb-4" style="color: #f2f2f2">My Skills</h1>
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Portfolio</h2>
-                <hr class="my-4">
-            </div>
-        </div>
-        <div class="row">
-            <!-- Portfolio item 1 -->
-            <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="col-md-3 mb-3" id="services">
                 <div class="card h-100">
-                    <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Project One</h4>
-                        <p class="card-text">Description of project one.</p>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1869px-Python-logo-notext.svg.png"
+                            alt="Python Logo" width="64" height="64" />
+                        <h5 class="card-title mt-3">Python</h5>
                     </div>
                 </div>
             </div>
-            <!-- Portfolio item 2 -->
-            <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="col-md-3 mb-3" id="services">
                 <div class="card h-100">
-                    <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Project Two</h4>
-                        <p class="card-text">Description of project two.</p>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://logowik.com/content/uploads/images/flutter5786.jpg" alt="Flutter Logo"
+                            width="64" height="64" />
+                        <h5 class="card-title mt-3">Flutter</h5>
                     </div>
                 </div>
             </div>
-            <!-- Portfolio item 3 -->
-            <div class="col-lg-4 col-sm-6 portfolio-item">
+            <div class="col-md-3 mb-3" id="services">
                 <div class="card h-100">
-                    <img class="card-img-top" src="https://via.placeholder.com/350x150" alt="">
-                    <div class="card-body">
-                        <h4 class="card-title">Project Three</h4>
-                        <p class="card-text">Description of project three.</p>
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png"
+                            alt="Ubuntu Logo" width="64" height="64" />
+                        <h5 class="card-title mt-3">TypeScript</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3" id="services">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="Git Logo"
+                            width="64" height="64" />
+                        <h5 class="card-title mt-3">Git Source Control</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3" id="services">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
+                            alt="React Logo" width="64" height="64" />
+                        <h5 class="card-title mt-3">React</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3" id="services">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://logowik.com/content/uploads/images/mongodb9740.logowik.com.webp"
+                            alt="MongoDB Logo" width="64" height="64" />
+                        <h5 class="card-title mt-3">MongoDB</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3" id="services">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://e7.pngegg.com/pngimages/91/429/png-clipart-web-development-html-css3-the-ohana-code-logo-2cpaper-projection-shaded-1660937-html-dropdown-js-blue-text.png"
+                            alt="HTML & CSS Logo" width="64" height="64" />
+                        <h5 class="card-title mt-3">HTML & CSS</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mb-3" id="services">
+                <div class="card h-100">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                            alt="JavaScript Logo" width="64" height="64" />
+                        <h5 class="card-title mt-3">JavaScript</h5>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="bg-light py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2>Contact Me</h2>
-                <p class="lead">Feel free to reach out to me using the form below!</p>
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Your Name" required>
+    <div class="container mt-5" style="background-color: #201f1f; padding-top: 1rem">
+        <h1 class="text-center mb-4" style="color: #f2f2f2">Portfolio</h1>
+        <div class="row" style="padding: 40px">
+            <div class="col-md-6 mb-4" id="portfolio">
+                <div class="card h-100" style="
+              background-color: #1a1a1a;
+              border: 2px solid black;
+              color: #ffd43b;
+            ">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <a href="https://onlyflexbox-faraz141.vercel.app/"><img src="./Screenshot 2024-06-21 223336.jpg"
+                                alt="" style="width: 100%; height: 100%" /></a>
+                        <h5 class="card-title mt-3">REAL ESTATE WEBSITE</h5>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Your Email" required>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" id="portfolio">
+                <div class="card h-100" style="
+              background-color: #1a1a1a;
+              border: 2px solid black;
+              color: #ffd43b;
+            ">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <a href="https://bq-wd1-todolist-app-faraz141.vercel.app/"><img
+                                src="./Screenshot 2024-06-21 232335.jpg" alt="" style="width: 100%; height: 100%" /></a>
+                        <h5 class="card-title mt-3">TODO LIST APP</h5>
                     </div>
-                    <div class="form-group">
-                        <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" id="portfolio">
+                <div class="card h-100" style="
+              background-color: #1a1a1a;
+              border: 2px solid black;
+              color: #ffd43b;
+            ">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <a href="https://masood-kidwai.github.io/travel-website/"><img
+                                src="https://github.com/faraz141/final-project/assets/153891083/9a576b1e-d5cc-4fa5-9915-5adc12701bfe"
+                                alt="" style="width: 100%; height: 100%" /></a>
+                        <h5 class="card-title mt-3">TRAVEL AGENCY WEBSITE</h5>
                     </div>
-                    <button type="submit" class="btn btn-primary">Send</button>
-                </form>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4" id="portfolio">
+                <div class="card h-100" style="
+              background-color: #1a1a1a;
+              border: 2px solid black;
+              color: #ffd43b;
+            ">
+                    <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                        <a href="https://faraz141-only-css-grid.vercel.app/"><img
+                                src="./Screenshot 2024-06-21 230918.jpg" alt="" style="width: 100%; height: 100%" /></a>
+                        <h5 class="card-title mt-3">JOB PORTAL WEBSITE</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mt-4">
+            <button type="button" class="btn btn-primary" style="margin-bottom: 20px;">View more</button>
+        </div>
+    </div>
+    <div class="container mt-5" style="background-color: #201f1f; padding-top: 1rem">
+        <div class="contact-section text-center">
+            <h1>Contact Me</h1>
+            <hr style="
+            width: 10%;
+            margin: 0 auto;
+            background-color: #ffc107;
+            height: 2px;
+          " />
+            <div class="container">
+                <div class="row justify-content-center mt-4">
+                    <div class="col-md-4" id="services">
+                        <div class="card contact-card">
+                            <div class="card-body">
+                                <i class="bi bi-envelope"></i>
+                                <p class="contact-info">alamfaraz141@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="services">
+                        <div class="card contact-card">
+                            <div class="card-body">
+                                <i class="bi bi-telephone"></i>
+                                <p class="contact-info">0312-8738672</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4" id="services">
+                        <div class="card contact-card">
+                            <div class="card-body">
+                                <i class="bi bi-geo-alt"></i>
+                                <p class="contact-info">Karachi, Sindh Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-icons mt-4">
+                    <a href="https://www.facebook.com/faraz.alam.14203544?mibextid=kFxxJD"><i
+                        class="fab fa-facebook-f" style="color: #ffd43b"></i></a>
+                    <a href="https://x.com/faziikhan2266?t=-u8CnXfuYCZUP3hxWC5gkA&s=09"><i class="fab fa-twitter"
+                            style="color: #ffd43b"></i></a>
+                    <a href="https://www.linkedin.com/in/faraz-alam-89a923296/"><i class="fab fa-linkedin-in"
+                                style="color: #ffd43b"></i></a>
+                    <a href="https://github.com/faraz141"><i class="fab fa-github" style="color: #ffd43b"></i></a>
+                </div>
+            </div>
+            <div class="footer-text mt-4">
+                <p>"Thanks for Scrolling"</p>
             </div>
         </div>
     </div>
-</section>
-
-<!-- Footer -->
-<footer class="py-5 bg-dark">
-    <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Name 2024</p>
-    </div>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz4fnFO9gybBud7RduPuemT//+jJXB16zg6i8UQD3lV5uDC3Yc7bz1Eeow"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
